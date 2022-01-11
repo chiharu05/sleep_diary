@@ -1,24 +1,35 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
+sleep_diary
 
-Things you may want to cover:
+# アプリケーション概要
+就寝時間・起床時間・眠気を感じた時間を記録する
 
-* Ruby version
+# URL
 
-* System dependencies
+# 利用方法
 
-* Configuration
+# アプリケーションを作成した背景
 
-* Database creation
+# 要件定義のURL
 
-* Database initialization
+# 実装した機能
 
-* How to run the test suite
+# 実装予定の機能
 
-* Services (job queues, cache servers, search engines, etc.)
+# データベース設計
 
-* Deployment instructions
+## posts
 
-* ...
+|Column         |Type      |Options      |
+|---------------|----------|-------------|
+| date_and_time | datetime | null: false |
+| kind_id       | integer  | null: false |
+| memo          | text     |             |
+
+# 画面遷移図
+
+# 開発環境
+
+# ローカルでの動作方法
