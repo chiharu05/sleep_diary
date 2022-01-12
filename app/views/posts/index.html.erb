@@ -1,7 +1,13 @@
 <h1>今月の記録</h1>
-
-<%= month_calendar do |date| %>
-  <%= date %>
-<% end %>
+<div class = "calender">
+  <%= month_calendar posts: @posts do |date,posts| %>
+    <%= date.day %>
+      <% posts.each do|post| %>
+        <div class = "kind">
+          <%= post.kind_id.name %>
+        </div>
+      <% end %>
+  <% end %>
+</div>
 
 <h2>投稿ページに戻る</h2>
