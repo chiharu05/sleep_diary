@@ -1,3 +1,18 @@
-<h1>トップページ</h1>
+
 
 <h2>一覧ページに移動</h2>
+
+<div class = "current-status">
+  <h1>入力する</h1>
+    <%= form_with model: @post, local: true do |f| %>
+      <div class = "content">
+        <div class = "content-text">日時</div>
+          <%= f.text_field :date_and_time, class:"date", placeholder:"XXXX-XX-XX XX:XX" %>
+        <div class = "content-text">種類</div>
+          <%= f.collection_select(:kind_id, Kind.all, :id, :name, {}, {class:"kind-select"}) %>
+        <div class = "content-text">メモ</div>
+          <%= f.text_area :memo, class:"memo", placeholder:"メモ" ,maxlength:"200" %>
+        <%= f.submit "投稿する" ,class:"btn" %>
+      </div>
+    <% end %>
+</div>

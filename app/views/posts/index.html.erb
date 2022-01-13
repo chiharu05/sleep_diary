@@ -3,11 +3,16 @@
   <%= month_calendar posts: @posts do |date,posts| %>
     <%= date.day %>
       <% posts.each do|post| %>
-        <div class = "kind">
-          <%= post.kind_id.name %>
+        <div class = "post">
+          <div class = "post.kind">
+            <%= post.kind_id.name %>
+          </div>
+          <div class = "post.memo">
+            <%= post.memo %>
+          </div>
         </div>
       <% end %>
   <% end %>
 </div>
 
-<h2>投稿ページに戻る</h2>
+<%= link_to "投稿ページに戻る", new_post_path, class:"post" %>
