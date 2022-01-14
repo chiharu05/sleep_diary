@@ -3,14 +3,8 @@
   <%= month_calendar posts: @posts do |date,posts| %>
     <%= date.day %>
       <% posts.each do|post| %>
-        <div class = "post">
-          <div class = "post.kind">
-            <%= post.kind_id.name %>
-          </div>
-          <div class = "post.memo">
-            <%= post.memo %>
-          </div>
-        </div>
+        <%= post.date_and_time.strftime('%H:%M') %>
+          <%= link_to post.kind_id.name,post_path(post) %>
       <% end %>
   <% end %>
 </div>
