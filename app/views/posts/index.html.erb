@@ -1,12 +1,11 @@
 <h1>今月の記録</h1>
-<div class = "calender">
-  <%= month_calendar posts: @posts do |date,posts| %>
+  <%= month_calendar events: @posts do |date,posts| %>
     <%= date.day %>
       <% posts.each do|post| %>
-        <%= post.date_and_time.strftime('%H:%M') %>
-          <%= link_to post.kind_id.name,post_path(post) %>
+          <div>
+          <%= post.kind.name %>
+          </div>
       <% end %>
   <% end %>
-</div>
 
 <%= link_to "投稿ページに戻る", new_post_path, class:"post" %>
