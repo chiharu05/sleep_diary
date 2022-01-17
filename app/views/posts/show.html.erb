@@ -1,3 +1,10 @@
 <h1>詳細トップページ</h1>
+<% @posts.each do|post| %>
+  <div>
+      <%= @post.created_at %>
+      <%= @post.kind.name %>
+      <%= @post.memo %>
+  </div>
+<% end %>
 
-<h2>一覧ページに移動</h2>
+<%= link_to "一覧ページに戻る", posts_path, class:"post" %>
