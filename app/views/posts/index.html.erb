@@ -2,9 +2,11 @@
   <%= month_calendar events: @posts do |date,posts| %>
     <%= date.day %>
       <% posts.each do|post| %>
-          <div>
-          <%= post.kind.name %>
-          </div>
+        <div>
+          <%= link_to post_path(post.id) do %>
+            <%= post.kind.name %>
+          <% end %>
+        </div>
       <% end %>
   <% end %>
 
