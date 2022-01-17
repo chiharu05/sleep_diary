@@ -13,6 +13,6 @@
     <%= link_to "記録を編集する", edit_post_path(@post.id), class:"post" %>
   </li>
   <li>
-    <%= link_to '記録を削除する', '#' %>
+    <%= link_to '記録を削除する', post_path(@post.id), method: :delete %>
   </li>
 </ul>
