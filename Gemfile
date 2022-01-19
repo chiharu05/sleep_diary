@@ -58,4 +58,3 @@ gem 'simple_calendar', '~> 2.0'
 gem 'active_hash'
 gem 'react-rails', '~> 1.0'
 gem 'chart-js-rails', '~> 0.1.4'
-gem "chartkick"
