@@ -7,7 +7,7 @@ sleep_diary
 眠気を感じた時間を記録する
 
 # URL
-https://sleep-diary-37257.herokuapp.com/
+https://sleep-diary-37257.herokuapp.com/posts/new
 
 # テスト用アカウント
 Basic認証ログインID admin
@@ -19,7 +19,7 @@ Basic認証ログインPass 0000
 
 # アプリケーションを作成した背景
 自分が眠気の相談で病院に行ったとき、提出するよう求められた記録書がPDF形式だった。
-そのため書き忘れ・印刷する面倒さがあり、もっと楽にできないかと考えた。
+そのため書き忘れや印刷する面倒さがあり、もっと楽にできないかと考えた。
 
 # 要件定義のURL
 https://docs.google.com/spreadsheets/d/1PWnfGJ9-q_FDTzS8-b7jeRkoBMlmi8t_P2kftl24L-I/edit#gid=982722306
