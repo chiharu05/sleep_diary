@@ -1,20 +1,33 @@
-<h1>詳細トップページ</h1>
-  <div>
-      <%= @post.start_time.to_s(:datetime_jp) %>
-      <%= @post.kind.name %>
-      <%= @post.memo %>
-  </div>
+<div class="post__wrapper">
 
-<ul class="more_list">
-  <li>
-    <%= link_to "一覧ページに戻る", posts_path, class:"post" %>
-  </li>
+  <div class="post__body">
+    <div class="post__detail">
+      <div class="post__title">時刻</div>
+      <div class="post__memo">
+        <%= l @post.start_time %>
+      </div>
+    </div>
+
+    <div class="post__detail">
+      <div class="post__title">種類</div>
+      <div class="post__memo">
+        <%= @post.kind.name %>
+      </div>
+    </div>
+
+    <div class="post__detail">
+      <div class="post__title">メモ</div>
+      <div class="post__memo">
+        <%= @post.memo %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="post__manage">
+    <%= link_to "一覧ページに戻る", posts_path, class: :post__btn %>
   <% if user_signed_in? && current_user.id == @post.user_id %>
-  <li>
-    <%= link_to "記録を編集する", edit_post_path(@post.id), class:"post" %>
-  </li>
-  <li>
-    <%= link_to '記録を削除する', post_path(@post.id), method: :delete %>
-  </li>
+    <%= link_to "記録を編集する", edit_post_path(@post.id), class: :post__btn %>
+    <%= link_to '記録を削除する', post_path(@post.id), method: :delete, class: :post__btn %>
   <% end %>
-</ul>
+</div>
