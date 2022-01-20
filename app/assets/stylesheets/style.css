@@ -40,18 +40,18 @@ li {
 }
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+  padding: 0.6em 1.8em;
+  font-size: 1.0em;
+  color: #0285ff;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #0285ff solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #0285ff;
 }
 
 /* 投稿ページ */
@@ -67,12 +67,12 @@ li {
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
-  font-size: 0.8em;
+  font-size: 1.0em;
   color: #fff;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
-  border: 1px #87CEFA solid;
+  background: #0285ff;
+  border: 1px #0285ff solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
   transition: 0.2s ease;
@@ -85,12 +85,12 @@ li {
 
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+  padding: 0.6em 1.8em;
+  font-size: 1.0em;
+  color: #0285ff;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #0285ff solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
@@ -110,17 +110,22 @@ li {
 }
 .post__memo{
   display: flex;
+  padding-top: 18px;
+}
+
+.post__manage{
+  display: flex;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 18px;
 }
 .post__btn{
   display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA ;
+  padding: 0.6em 1.8em;
+  font-size: 1.0em;
+  color: #0285ff;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA  solid;
+  border: 1px #0285ff solid;
   border-radius: 3px;
   transition: 0.4s ease;
   margin: 0 4px;
