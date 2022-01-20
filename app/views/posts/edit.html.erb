@@ -2,13 +2,21 @@
   <h1>編集する</h1>
     <%= form_with model: @post, local: true do |f| %>
       <div class = "content">
-        <div class = "content-text">種類</div>
-          <%= f.collection_select(:kind_id, Kind.all, :id, :name, {}, {class:"kind-select"}) %>
-        <div class = "content-text">メモ</div>
-          <%= f.text_area :memo, class:"memo", placeholder:"メモ" ,maxlength:"200" %>
-        <%= f.submit "投稿する" ,class:"btn" %>
+        <%= f.label :start_time, "日付" %><br />
+        <%= f.date_field :start_time,  class:"date", placeholder:"XXXX-XX-XX XX:XX" %>
+        </div>
+      <div class="content">
+        <%= f.label :kind_id, "種類" %><br />
+        <%= f.collection_select(:kind_id, Kind.all, :id, :name, {}, {class:"kind-select"}) %>
+      </div>
+      <div class="content">
+        <%= f.label :start_time, "メモ" %><br />
+        <%= f.text_area :memo, class:"memo", placeholder:"メモ" ,maxlength:"200" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "投稿する", class: :form__btn %>
       </div>
     <% end %>
 </div>
 
-<%= link_to "一覧ページに戻る", posts_path, class:"post" %>
+<%= link_to "一覧ページに戻る", posts_path, class: :nav__btn %>
