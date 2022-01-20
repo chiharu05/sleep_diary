@@ -1,6 +1,6 @@
 <h1>詳細トップページ</h1>
   <div>
-      <%= @post.start_time.to_s(:datetime_jp) %>
+      <%= l @post.created_at %>
       <%= @post.kind.name %>
       <%= @post.memo %>
   </div>
