@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_new, except: [:new]
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(:user)
   end
 
   def new
@@ -18,17 +20,18 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.all
-    @post = Post.find(params[:id])
-
+    unless @post.user_id == current_user.id
+      redirect_to posts_path
+    end
   end
 
   def edit
-    @post = Post.find(params[:id])
+    unless @post.user_id == current_user.id
+      redirect_to post_path(@post)
+    end
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to post_path(@post)
     else
@@ -37,14 +40,23 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     if @post.destroy
       redirect_to root_path
     end
   end
 
   private
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
   def post_params
-    params.require(:post).permit(:start_time, :kind_id, :memo)
+    params.require(:post).permit(:start_time, :kind_id, :memo).merge(user_id: current_user.id )
+  end
+
+  def move_to_new
+    unless user_signed_in?
+      redirect_to action: :new
+    end
   end
 end

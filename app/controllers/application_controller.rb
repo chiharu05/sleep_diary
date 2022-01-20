@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth, :set_time_zone
-
+  before_action :authenticate_user!
 
   private
 
