@@ -38,9 +38,9 @@ https://docs.google.com/spreadsheets/d/1PWnfGJ9-q_FDTzS8-b7jeRkoBMlmi8t_P2kftl24
 
 ・削除機能
 
-# 実装予定の機能
 ・ユーザー登録機能
 
+# 実装予定の機能
 ・グラフ表示機能
 
 # データベース設計
@@ -54,7 +54,7 @@ https://docs.google.com/spreadsheets/d/1PWnfGJ9-q_FDTzS8-b7jeRkoBMlmi8t_P2kftl24
 | memo          | text     |             |
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/de16c59690eb1dc6be65865a5a79f42f.png)](https://gyazo.com/de16c59690eb1dc6be65865a5a79f42f)
+[![Image from Gyazo](https://i.gyazo.com/6a01dc8795b4624de2c23b3a51828a61.png)](https://gyazo.com/6a01dc8795b4624de2c23b3a51828a61)
 
 # 開発環境
 ・フロントエンド:html,css

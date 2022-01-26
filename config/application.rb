@@ -12,7 +12,7 @@ module SleepDiary
     config.load_defaults 6.0
     config.active_record.default_timezone = :local
     config.i18n.default_locale = :ja
-    config.time_zone = 'Tokyo'
+    config.time_zone = 'Asia/Tokyo'
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
