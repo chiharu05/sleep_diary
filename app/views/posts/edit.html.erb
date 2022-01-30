@@ -3,7 +3,7 @@
     <%= form_with model: @post, local: true do |f| %>
       <div class = "content">
         <%= f.label :start_time, "日付" %><br />
-        <%= f.text_field :start_time,  class:"date", placeholder:"XXXX-XX-XX XX:XX" %>
+        <%= f.datetime_select :start_time,  class:"date", placeholder:"XXXX-XX-XX XX:XX" %>
         </div>
       <div class="content">
         <%= f.label :kind_id, "種類" %><br />
